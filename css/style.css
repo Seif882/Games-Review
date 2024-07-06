@@ -1,0 +1,169 @@
+:root {
+  --main-color: #272b30;
+}
+
+body,
+.bg-details {
+  font-family: "Nerko One", cursive;
+  background-color: var(--main-color);
+}
+
+#wraper {
+  max-height: 25vh;
+  min-height: 120px;
+  object-fit: cover;
+}
+
+nav .container {
+  background-color: #3a497b;
+}
+
+input {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+.col-md-3,
+.card {
+  background-color: var(--main-color) !important;
+  border: 1px solid black !important;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+.card-footer {
+  border-top: 1px solid black;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+.col-md-3:hover {
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.col-md-3:hover .overlay {
+  opacity: 0;
+}
+
+.game-description {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-close {
+  background-color: gray !important;
+  right: 5%;
+}
+
+.badge {
+  max-height: 20px !important;
+}
+
+.info {
+  color: #3a497b;
+}
+/** Spinner **/
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #ff3d00 #ff3d00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #fff #fff transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.bg-spinner {
+  background-color: rgba(39, 43, 48, 0.5);
+}
+
+/** Scroll Bar **/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 45px;
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}
+
+.nav-link {
+  color: white !important;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: aqua !important;
+}
+
+.active {
+  color: aqua !important;
+}
